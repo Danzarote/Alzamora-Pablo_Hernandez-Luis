@@ -1,0 +1,75 @@
+[2023-10-26 21:37:38] [ ERROR] [OdontologoDaoH2:45] Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
+INSERT INTO ODONTOLOGOS (MATRICULA, NOMBRE, APELLIDO) VALUES (?, ?, ?) [42104-224]
+[2023-10-26 21:37:38] [ INFO ] [OdontologoDaoH2:50] Tuvimos un problema
+[2023-10-26 21:37:38] [ ERROR] [OdontologoDaoH2:51] Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
+INSERT INTO ODONTOLOGOS (MATRICULA, NOMBRE, APELLIDO) VALUES (?, ?, ?) [42104-224]
+[2023-10-26 21:43:48] [ ERROR] [OdontologoDaoH2:45] Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
+INSERT INTO ODONTOLOGOS (MATRICULA, NOMBRE, APELLIDO) VALUES (?, ?, ?) [42104-224]
+[2023-10-26 21:43:48] [ INFO ] [OdontologoDaoH2:50] Tuvimos un problema
+[2023-10-26 21:43:48] [ ERROR] [OdontologoDaoH2:51] Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
+INSERT INTO ODONTOLOGOS (MATRICULA, NOMBRE, APELLIDO) VALUES (?, ?, ?) [42104-224]
+[2023-10-26 21:44:13] [ ERROR] [OdontologoDaoH2:45] Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
+INSERT INTO ODONTOLOGOS (MATRICULA, NOMBRE, APELLIDO) VALUES (?, ?, ?) [42104-224]
+[2023-10-26 21:44:13] [ INFO ] [OdontologoDaoH2:50] Tuvimos un problema
+[2023-10-26 21:44:13] [ ERROR] [OdontologoDaoH2:51] Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
+INSERT INTO ODONTOLOGOS (MATRICULA, NOMBRE, APELLIDO) VALUES (?, ?, ?) [42104-224]
+[2023-10-26 21:45:10] [ ERROR] [OdontologoDaoH2:45] Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
+INSERT INTO ODONTOLOGOS (MATRICULA, NOMBRE, APELLIDO) VALUES (?, ?, ?) [42104-224]
+[2023-10-26 21:45:10] [ INFO ] [OdontologoDaoH2:50] Tuvimos un problema
+[2023-10-26 21:45:10] [ ERROR] [OdontologoDaoH2:51] Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
+INSERT INTO ODONTOLOGOS (MATRICULA, NOMBRE, APELLIDO) VALUES (?, ?, ?) [42104-224]
+[2023-10-26 21:47:17] [ ERROR] [OdontologoDaoH2:45] Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
+INSERT INTO ODONTOLOGOS (MATRICULA, NOMBRE, APELLIDO) VALUES (?, ?, ?) [42104-224]
+[2023-10-26 21:47:17] [ INFO ] [OdontologoDaoH2:50] Tuvimos un problema
+[2023-10-26 21:47:17] [ ERROR] [OdontologoDaoH2:51] Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
+INSERT INTO ODONTOLOGOS (MATRICULA, NOMBRE, APELLIDO) VALUES (?, ?, ?) [42104-224]
+[2023-10-26 21:50:54] [ ERROR] [OdontologoDaoH2:90] Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
+SELECT * FROM ODONTOLOGOS [42104-224]
+[2023-10-26 21:52:44] [ ERROR] [OdontologoDaoH2:45] Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
+INSERT INTO ODONTOLOGOS (MATRICULA, NOMBRE, APELLIDO) VALUES (?, ?, ?) [42104-224]
+[2023-10-26 21:52:44] [ INFO ] [OdontologoDaoH2:50] Tuvimos un problema
+[2023-10-26 21:52:44] [ ERROR] [OdontologoDaoH2:51] Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
+INSERT INTO ODONTOLOGOS (MATRICULA, NOMBRE, APELLIDO) VALUES (?, ?, ?) [42104-224]
+[2023-10-26 21:55:49] [ ERROR] [OdontologoDaoH2:45] Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
+INSERT INTO ODONTOLOGOS (MATRICULA, NOMBRE, APELLIDO) VALUES (?, ?, ?) [42104-224]
+[2023-10-26 21:55:49] [ INFO ] [OdontologoDaoH2:50] Tuvimos un problema
+[2023-10-26 21:55:49] [ ERROR] [OdontologoDaoH2:51] Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
+INSERT INTO ODONTOLOGOS (MATRICULA, NOMBRE, APELLIDO) VALUES (?, ?, ?) [42104-224]
+[2023-10-26 21:55:57] [ ERROR] [OdontologoDaoH2:45] Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
+INSERT INTO ODONTOLOGOS (MATRICULA, NOMBRE, APELLIDO) VALUES (?, ?, ?) [42104-224]
+[2023-10-26 21:55:57] [ INFO ] [OdontologoDaoH2:50] Tuvimos un problema
+[2023-10-26 21:55:57] [ ERROR] [OdontologoDaoH2:51] Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
+INSERT INTO ODONTOLOGOS (MATRICULA, NOMBRE, APELLIDO) VALUES (?, ?, ?) [42104-224]
+[2023-10-26 21:56:21] [ ERROR] [OdontologoDaoH2:45] Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
+INSERT INTO ODONTOLOGOS (MATRICULA, NOMBRE, APELLIDO) VALUES (?, ?, ?) [42104-224]
+[2023-10-26 21:56:21] [ INFO ] [OdontologoDaoH2:50] Tuvimos un problema
+[2023-10-26 21:56:21] [ ERROR] [OdontologoDaoH2:51] Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
+INSERT INTO ODONTOLOGOS (MATRICULA, NOMBRE, APELLIDO) VALUES (?, ?, ?) [42104-224]
+[2023-10-26 21:57:06] [ INFO ] [OdontologoDaoH2:41] Se ha registrado el odontologo: com.backend.parcial.model.Odontologo@7e9131d5
+[2023-10-26 21:57:06] [ INFO ] [OdontologoDaoH2:87] Listado de odontologos obtenido: [com.backend.parcial.model.Odontologo@33990a0c]
+[2023-10-26 21:59:05] [ INFO ] [OdontologoDaoH2:41] Se ha registrado el odontologo: com.backend.parcial.model.Odontologo@2cdd0d4b
+[2023-10-26 21:59:05] [ INFO ] [OdontologoDaoH2:87] Listado de odontologos obtenido: [com.backend.parcial.model.Odontologo@b62d79, com.backend.parcial.model.Odontologo@6631f5ca]
+[2023-10-26 22:00:01] [ INFO ] [OdontologoDaoH2:41] Se ha registrado el odontologo: com.backend.parcial.model.Odontologo@2cdd0d4b
+[2023-10-26 22:00:01] [ INFO ] [OdontologoDaoH2:87] Listado de odontologos obtenido: [com.backend.parcial.model.Odontologo@4d02f94e, com.backend.parcial.model.Odontologo@2b48a640, com.backend.parcial.model.Odontologo@1e683a3e]
+[2023-10-26 22:02:25] [ INFO ] [OdontologoDaoH2:41] Se ha registrado el odontologo: com.backend.parcial.model.Odontologo@1bb266b3
+[2023-10-26 22:03:45] [ INFO ] [OdontologoDaoH2:41] Se ha registrado el odontologo: com.backend.parcial.model.Odontologo@1bb266b3
+[2023-10-26 22:05:13] [ INFO ] [OdontologoDaoH2:41] Se ha registrado el odontologo: com.backend.parcial.model.Odontologo@1bb266b3
+[2023-10-26 22:06:06] [ INFO ] [OdontologoDaoH2:41] Se ha registrado el odontologo: com.backend.parcial.model.Odontologo@1bb266b3
+[2023-10-26 22:07:27] [ INFO ] [OdontologoDaoH2:41] Se ha registrado el odontologo: com.backend.parcial.model.Odontologo@306cf3ea
+[2023-10-26 22:08:52] [ INFO ] [OdontologoDaoH2:41] Se ha registrado el odontologo: Odontologo{id=9, matricula=1, nombre='Pablo', apellido='Alzamora'}
+[2023-10-26 22:09:08] [ INFO ] [OdontologoDaoH2:41] Se ha registrado el odontologo: Odontologo{id=10, matricula=1, nombre='Pablo', apellido='Alzamora'}
+[2023-10-26 22:09:44] [ INFO ] [OdontologoDaoH2:41] Se ha registrado el odontologo: Odontologo{id=11, matricula=1, nombre='Pablo', apellido='Alzamora'}
+[2023-10-26 22:09:54] [ INFO ] [OdontologoDaoH2:86] Listado de odontologos obtenido: [Odontologo{id=1, matricula=1, nombre='Pablo', apellido='Alzamora'}, Odontologo{id=2, matricula=1, nombre='Pablo', apellido='Alzamora'}, Odontologo{id=3, matricula=1, nombre='Pablo', apellido='Alzamora'}, Odontologo{id=4, matricula=1, nombre='Pablo', apellido='Alzamora'}, Odontologo{id=5, matricula=1, nombre='Pablo', apellido='Alzamora'}, Odontologo{id=6, matricula=1, nombre='Pablo', apellido='Alzamora'}, Odontologo{id=7, matricula=1, nombre='Pablo', apellido='Alzamora'}, Odontologo{id=8, matricula=1, nombre='Pablo', apellido='Alzamora'}, Odontologo{id=9, matricula=1, nombre='Pablo', apellido='Alzamora'}, Odontologo{id=10, matricula=1, nombre='Pablo', apellido='Alzamora'}, Odontologo{id=11, matricula=1, nombre='Pablo', apellido='Alzamora'}]
+[2023-10-26 22:36:08] [ INFO ] [OdontologoDaoH2:20] Odontologo guardado: Odontologo{id=1, matricula=2, nombre='Luis', apellido='Hernandez'}
+[2023-10-26 22:36:08] [ INFO ] [OdontologoDaoH2:27] Lista de Odontologos: [Odontologo{id=0, matricula=2, nombre='Luis', apellido='Hernandez'}]
+[2023-10-26 22:37:07] [ INFO ] [OdontologoDaoH2:27] Lista de Odontologos: []
+[2023-10-26 22:37:52] [ INFO ] [OdontologoDaoH2:20] Odontologo guardado: Odontologo{id=1, matricula=2, nombre='Luis', apellido='Hernandez'}
+[2023-10-26 22:37:52] [ INFO ] [OdontologoDaoH2:27] Lista de Odontologos: [Odontologo{id=0, matricula=2, nombre='Luis', apellido='Hernandez'}]
+[2023-10-26 22:38:43] [ INFO ] [OdontologoDaoH2:20] Odontologo guardado: Odontologo{id=1, matricula=2, nombre='Luis', apellido='Hernandez'}
+[2023-10-26 22:38:43] [ INFO ] [OdontologoDaoH2:27] Lista de Odontologos: [Odontologo{id=0, matricula=2, nombre='Luis', apellido='Hernandez'}]
+[2023-10-26 22:39:04] [ INFO ] [OdontologoDaoH2:20] Odontologo guardado: Odontologo{id=1, matricula=2, nombre='Luis', apellido='Hernandez'}
+[2023-10-26 22:39:04] [ INFO ] [OdontologoDaoH2:20] Odontologo guardado: Odontologo{id=2, matricula=3, nombre='Lu', apellido='Murga'}
+[2023-10-26 22:39:04] [ INFO ] [OdontologoDaoH2:27] Lista de Odontologos: [Odontologo{id=0, matricula=2, nombre='Luis', apellido='Hernandez'}, Odontologo{id=0, matricula=3, nombre='Lu', apellido='Murga'}]
+[2023-10-26 22:42:27] [ INFO ] [OdontologoDaoH2:20] Odontologo guardado: Odontologo{id=1, matricula=2, nombre='Luis', apellido='Hernandez'}
+[2023-10-26 22:42:27] [ INFO ] [OdontologoDaoH2:20] Odontologo guardado: Odontologo{id=2, matricula=3, nombre='Lu', apellido='Murga'}
+[2023-10-26 22:42:27] [ INFO ] [OdontologoDaoH2:27] Lista de Odontologos: [Odontologo{id=1, matricula=2, nombre='Luis', apellido='Hernandez'}, Odontologo{id=2, matricula=3, nombre='Lu', apellido='Murga'}]
