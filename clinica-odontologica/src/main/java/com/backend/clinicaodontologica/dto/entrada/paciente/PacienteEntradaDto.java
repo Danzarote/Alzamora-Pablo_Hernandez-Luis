@@ -85,4 +85,8 @@ public class PacienteEntradaDto {
     public void setDomicilioEntradaDto(DomicilioEntradaDto domicilioEntradaDto) {
         this.domicilioEntradaDto = domicilioEntradaDto;
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 1491effbb700b4bb375cd110d3ab48890f54643a

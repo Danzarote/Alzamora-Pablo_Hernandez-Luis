@@ -1,4 +1,4 @@
-package com.backend.clinicaodontologica.service;
+package com.backend.clinicaodontologica;
 
 
 class PacienteServiceTest {
@@ -42,8 +42,4 @@ class PacienteServiceTest {
         assertFalse(pacienteService.listarPacientes().isEmpty());
 
     }*/
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 1491effbb700b4bb375cd110d3ab48890f54643a

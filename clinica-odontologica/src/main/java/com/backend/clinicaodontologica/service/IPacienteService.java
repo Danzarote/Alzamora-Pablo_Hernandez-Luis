@@ -18,4 +18,8 @@ public interface IPacienteService {
     void eliminarPaciente(Long id);
 
     PacienteSalidaDto buscarPacientePorDni(int dni);
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 1491effbb700b4bb375cd110d3ab48890f54643a

@@ -51,4 +51,8 @@ public class PacienteController {
         pacienteService.eliminarPaciente(id);
         return new ResponseEntity<>("Paciente eliminado correctamente", HttpStatus.OK);
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 1491effbb700b4bb375cd110d3ab48890f54643a

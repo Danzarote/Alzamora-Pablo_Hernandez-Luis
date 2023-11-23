@@ -18,4 +18,8 @@ public class JsonPrinter {
         return gson.toJson(t).trim().replace("\n", "").replace("\t", "");
 
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 1491effbb700b4bb375cd110d3ab48890f54643a

@@ -56,4 +56,8 @@ public class OdontologoEntradaDto {
     public void setApellido(String apellido) {
         this.apellido = apellido;
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 1491effbb700b4bb375cd110d3ab48890f54643a

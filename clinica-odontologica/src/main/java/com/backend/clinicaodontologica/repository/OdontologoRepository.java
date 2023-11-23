@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 package com.backend.clinicaodontologica.repository;
 
 import com.backend.clinicaodontologica.entity.Odontologo;
@@ -18,3 +19,15 @@ public interface OdontologoRepository extends JpaRepository<Odontologo, Long> {
     // Método para buscar odontólogos por nombre y apellido
     List<Odontologo> findByNombreAndApellido(String nombre, String apellido);
 }
+=======
+package com.backend.clinicaodontologica.repository;
+
+import com.backend.clinicaodontologica.entity.Odontologo;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface OdontologoRepository extends JpaRepository<Odontologo, Long> {
+    Odontologo findById(int id);
+}
+>>>>>>> 1491effbb700b4bb375cd110d3ab48890f54643a

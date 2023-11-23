@@ -1,5 +1,6 @@
 package com.backend.clinicaodontologica.dto.entrada.turno;
 
+<<<<<<< HEAD
 import java.time.LocalDateTime;
 
 public class TurnoEntradaDto {
@@ -40,3 +41,7 @@ public class TurnoEntradaDto {
         this.fechaYHora = fechaYHora;
     }
 }
+=======
+public class TurnoEntradaDto {
+}
+>>>>>>> 1491effbb700b4bb375cd110d3ab48890f54643a

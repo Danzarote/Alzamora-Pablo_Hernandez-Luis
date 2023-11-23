@@ -7,12 +7,19 @@ import javax.persistence.*;
 public class Odontologo {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+<<<<<<< HEAD
     private int id;
     @Column(length =15)
     private String matricula;
     @Column(length =15)
     private String nombre;
     @Column(length =15)
+=======
+    private Long id;
+
+    private String matricula;
+    private String nombre;
+>>>>>>> 1491effbb700b4bb375cd110d3ab48890f54643a
     private String apellido;
 
     public Odontologo() {
@@ -24,11 +31,19 @@ public class Odontologo {
         this.apellido = apellido;
     }
 
+<<<<<<< HEAD
     public int getId() {
         return id;
     }
 
     public void setId(int id) {
+=======
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+>>>>>>> 1491effbb700b4bb375cd110d3ab48890f54643a
         this.id = id;
     }
 
@@ -56,8 +71,13 @@ public class Odontologo {
         this.apellido = apellido;
     }
 
+<<<<<<< HEAD
     @Override
     public String toString() {
         return "Id: " + id + " - Nombre: " + nombre + " - Apellido: " + apellido + " - Matricula: " + matricula;
     }
 }
+=======
+
+}
+>>>>>>> 1491effbb700b4bb375cd110d3ab48890f54643a

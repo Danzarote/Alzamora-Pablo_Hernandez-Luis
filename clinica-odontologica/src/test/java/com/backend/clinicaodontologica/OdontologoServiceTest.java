@@ -1,10 +1,6 @@
-package com.backend.clinicaodontologica.service;
+package com.backend.clinicaodontologica;
 
 
-<<<<<<< HEAD
-class OdontologoServiceTest {
-
-=======
 import com.backend.clinicaodontologica.dao.impl.OdontologoDaoH2;
 import com.backend.clinicaodontologica.entity.Odontologo;
 import com.backend.clinicaodontologica.service.impl.OdontologoService;
@@ -57,6 +53,5 @@ class OdontologoServiceTest {
 
     }
 
->>>>>>> 1491effbb700b4bb375cd110d3ab48890f54643a
 
 }

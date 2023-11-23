@@ -11,6 +11,7 @@ import org.springframework.context.annotation.Bean;
 @SpringBootApplication
 public class ClinicaOdontologicaApplication {
 
+<<<<<<< HEAD
 	private static Logger logger = LoggerFactory.getLogger(ClinicaOdontologicaApplication.class);
 
 	public static void main(String[] args) {
@@ -26,3 +27,20 @@ public class ClinicaOdontologicaApplication {
 
 
 }
+=======
+    private static Logger logger = LoggerFactory.getLogger(ClinicaOdontologicaApplication.class);
+
+    public static void main(String[] args) {
+        SpringApplication.run(ClinicaOdontologicaApplication.class, args);
+        logger.info("ClinicaOdontologica is now running...");
+    }
+
+
+    @Bean
+    public ModelMapper modelMapper() {
+        return new ModelMapper();
+    }
+
+
+}
+>>>>>>> 1491effbb700b4bb375cd110d3ab48890f54643a
