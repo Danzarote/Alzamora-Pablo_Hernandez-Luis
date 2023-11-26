@@ -4,7 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="349eec44-933b-41ca-a113-77c2a80e34c4" name="Changes" comment="" />
+    <list default="true" id="349eec44-933b-41ca-a113-77c2a80e34c4" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../clinica-odontologica/src/main/java/com/backend/clinicaodontologica/entity/Odontologo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../clinica-odontologica/src/main/java/com/backend/clinicaodontologica/entity/Odontologo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../clinica-odontologica/src/main/java/com/backend/clinicaodontologica/repository/OdontologoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../clinica-odontologica/src/main/java/com/backend/clinicaodontologica/repository/OdontologoRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../clinica-odontologica/target/classes/com/backend/clinicaodontologica/entity/Odontologo.class" beforeDir="false" afterPath="$PROJECT_DIR$/../clinica-odontologica/target/classes/com/backend/clinicaodontologica/entity/Odontologo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../clinica-odontologica/target/classes/com/backend/clinicaodontologica/repository/OdontologoRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../clinica-odontologica/target/classes/com/backend/clinicaodontologica/repository/OdontologoRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../clinica-odontologica/target/classes/com/backend/clinicaodontologica/service/impl/OdontologoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../clinica-odontologica/target/classes/com/backend/clinicaodontologica/service/impl/OdontologoService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../clinica-odontologica/target/classes/com/backend/clinicaodontologica/service/impl/TurnoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../clinica-odontologica/target/classes/com/backend/clinicaodontologica/service/impl/TurnoService.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,6 +49,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "create.test.in.the.same.root": "true",
+    "git-widget-placeholder": "main",
     "last_opened_file_path": "C:/Users/pablo/IdeaProjects/Backend I/Examen/Alzamora-Pablo_Hernandez-Luis/Alzamora-Pablo_Hernandez-Luis",
     "onboarding.tips.debug.path": "C:/Users/Luis/IdeaProjects/Alzamora-Pablo_Hernandez-Luis/src/Main.java",
     "project.structure.last.edited": "Modules",
