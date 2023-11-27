@@ -2,6 +2,7 @@ package com.backend.clinicaodontologica.controller;
 
 import com.backend.clinicaodontologica.dto.entrada.turno.TurnoEntradaDto;
 import com.backend.clinicaodontologica.dto.salida.turno.TurnoSalidaDto;
+import com.backend.clinicaodontologica.exceptions.BadRequestException;
 import com.backend.clinicaodontologica.service.ITurnoService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -20,7 +21,7 @@ public class TurnoController {
     }
 
     @PostMapping("/asignar")
-    public ResponseEntity<String> asignarTurno(@RequestBody TurnoEntradaDto turnoEntradaDto) {
+    public ResponseEntity<String> asignarTurno(@RequestBody TurnoEntradaDto turnoEntradaDto) throws BadRequestException {
         turnoService.asignarTurno(turnoEntradaDto);
         return ResponseEntity.status(HttpStatus.CREATED).body("Turno asignado con éxito");
     }

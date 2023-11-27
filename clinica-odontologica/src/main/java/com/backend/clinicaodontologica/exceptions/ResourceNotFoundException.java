@@ -1,4 +1,4 @@
-/*package com.backend.clinicaodontologica.exceptions;
+package com.backend.clinicaodontologica.exceptions;
 
 public class ResourceNotFoundException extends Exception{
 
@@ -6,4 +6,3 @@ public class ResourceNotFoundException extends Exception{
         super(message);
     }
 }
-*/

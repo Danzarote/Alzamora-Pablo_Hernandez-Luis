@@ -5,6 +5,8 @@ import com.backend.clinicaodontologica.dto.salida.turno.TurnoSalidaDto;
 import com.backend.clinicaodontologica.entity.Odontologo;
 import com.backend.clinicaodontologica.entity.Paciente;
 import com.backend.clinicaodontologica.entity.Turno;
+import com.backend.clinicaodontologica.exceptions.BadRequestException;
+import com.backend.clinicaodontologica.exceptions.ResourceNotFoundException;
 import com.backend.clinicaodontologica.repository.OdontologoRepository;
 import com.backend.clinicaodontologica.repository.PacienteRepository;
 import com.backend.clinicaodontologica.repository.TurnoRepository;
@@ -38,7 +40,7 @@ public class TurnoService implements ITurnoService {
     }
 
     @Override
-    public void asignarTurno(TurnoEntradaDto turnoEntradaDto)  {
+    public void asignarTurno(TurnoEntradaDto turnoEntradaDto) throws BadRequestException {
         Paciente paciente = pacienteRepository.findById(turnoEntradaDto.getIdPaciente()).orElseThrow();
         Odontologo odontologo = odontologoRepository.findById(turnoEntradaDto.getIdOdontologo()).orElseThrow();
 
@@ -53,7 +55,10 @@ public class TurnoService implements ITurnoService {
 
             turnoRepository.save(nuevoTurno);
         }
-        else LOGGER.error("La fecha y hora ya estan ocupadas");
+        else {
+            LOGGER.error("La fecha y hora ya estan ocupadas");
+            throw new BadRequestException("La Fecha y Hora están ocupadas " + turnoEntradaDto.getFechaYHora());
+            }
     }
 
     @Override

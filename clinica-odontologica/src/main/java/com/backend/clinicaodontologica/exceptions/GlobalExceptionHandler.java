@@ -1,4 +1,4 @@
-/*package com.backend.clinicaodontologica.exceptions;
+package com.backend.clinicaodontologica.exceptions;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.validation.FieldError;
@@ -35,7 +35,14 @@ public class GlobalExceptionHandler {
         return exceptionMessage;
     }
 
+    @ExceptionHandler({BadRequestException.class})
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    public Map<String, String> manejarBadRequest(BadRequestException exception){
+        Map<String, String> mensaje = new HashMap<>();
+        mensaje.put("mensaje", "Dato incorrecto " + exception.getMessage());
+        return mensaje;
+    }
+
 
 
 }
-*/
