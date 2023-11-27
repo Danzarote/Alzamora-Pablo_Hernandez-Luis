@@ -16,6 +16,7 @@ import org.modelmapper.ModelMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.BadSqlGrammarException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -41,8 +42,11 @@ public class TurnoService implements ITurnoService {
 
     @Override
     public void asignarTurno(TurnoEntradaDto turnoEntradaDto) throws BadRequestException {
-        Paciente paciente = pacienteRepository.findById(turnoEntradaDto.getIdPaciente()).orElseThrow();
-        Odontologo odontologo = odontologoRepository.findById(turnoEntradaDto.getIdOdontologo()).orElseThrow();
+        Paciente paciente = pacienteRepository.findById(turnoEntradaDto.getIdPaciente()).orElseThrow(() -> new BadRequestException(
+                "Paciente no encontrado " + turnoEntradaDto.getIdPaciente()));
+        Odontologo odontologo = odontologoRepository.findById(turnoEntradaDto.getIdOdontologo()).orElseThrow(() -> new BadRequestException(
+                "Odontologo no encontrado " + turnoEntradaDto.getIdOdontologo()));
+
 
         // Verificar si la fecha y hora ya están ocupadas, implementar lógica según necesidad
             List<Turno> turnoAComparar = turnoRepository.findByFechaYHora(turnoEntradaDto.getFechaYHora());
