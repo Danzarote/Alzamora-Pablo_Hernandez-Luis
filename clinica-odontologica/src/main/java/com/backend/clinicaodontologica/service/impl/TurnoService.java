@@ -9,7 +9,10 @@ import com.backend.clinicaodontologica.repository.OdontologoRepository;
 import com.backend.clinicaodontologica.repository.PacienteRepository;
 import com.backend.clinicaodontologica.repository.TurnoRepository;
 import com.backend.clinicaodontologica.service.ITurnoService;
+import com.backend.clinicaodontologica.utils.JsonPrinter;
 import org.modelmapper.ModelMapper;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,6 +20,8 @@ import java.util.List;
 
 @Service
 public class TurnoService implements ITurnoService {
+
+    private final Logger LOGGER = LoggerFactory.getLogger(TurnoService.class);
 
     private final TurnoRepository turnoRepository;
     private final PacienteRepository pacienteRepository;
@@ -33,18 +38,22 @@ public class TurnoService implements ITurnoService {
     }
 
     @Override
-    public void asignarTurno(TurnoEntradaDto turnoEntradaDto) {
+    public void asignarTurno(TurnoEntradaDto turnoEntradaDto)  {
         Paciente paciente = pacienteRepository.findById(turnoEntradaDto.getIdPaciente()).orElseThrow();
         Odontologo odontologo = odontologoRepository.findById(turnoEntradaDto.getIdOdontologo()).orElseThrow();
 
         // Verificar si la fecha y hora ya están ocupadas, implementar lógica según necesidad
+            List<Turno> turnoAComparar = turnoRepository.findByFechaYHora(turnoEntradaDto.getFechaYHora());
+        if(turnoAComparar.isEmpty()) {
+            Turno nuevoTurno = new Turno();
+            nuevoTurno.setFechaYHora(turnoEntradaDto.getFechaYHora());
+            nuevoTurno.setPaciente(paciente);
+            nuevoTurno.setOdontologo(odontologo);
+            LOGGER.info("Turno Agendado: {}", JsonPrinter.toString(nuevoTurno));
 
-        Turno nuevoTurno = new Turno();
-        nuevoTurno.setFechaYHora(turnoEntradaDto.getFechaYHora());
-        nuevoTurno.setPaciente(paciente);
-        nuevoTurno.setOdontologo(odontologo);
-
-        turnoRepository.save(nuevoTurno);
+            turnoRepository.save(nuevoTurno);
+        }
+        else LOGGER.error("La fecha y hora ya estan ocupadas");
     }
 
     @Override
@@ -54,6 +63,7 @@ public class TurnoService implements ITurnoService {
         return turnos.stream()
                 .map(turno -> modelMapper.map(turno, TurnoSalidaDto.class))
                 .toList();
+
     }
 
     // Puedes agregar más métodos según las necesidades específicas de tu aplicación
