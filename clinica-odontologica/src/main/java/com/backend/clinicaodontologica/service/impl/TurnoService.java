@@ -65,10 +65,24 @@ public class TurnoService implements ITurnoService {
 
     @Override
     public List<TurnoSalidaDto> listarTurnos() {
-        List<Turno> turnos = turnoRepository.findAll();
-        return turnos.stream()
+        List<TurnoSalidaDto> turnos = turnoRepository.findAll()
+                .stream()
                 .map(turno -> modelMapper.map(turno, TurnoSalidaDto.class))
                 .toList();
+
+        if(LOGGER.isInfoEnabled())
+            LOGGER.info("Listado de todos los turnos: {}", JsonPrinter.toString(turnos));
+        return turnos;
+    }
+
+    public void eliminarTurno(Long id) throws ResourceNotFoundException{
+        if (turnoRepository.findById(id).orElse(null) != null) {
+            turnoRepository.deleteById(id);
+            LOGGER.warn("Se ha eliminado el turno con id: {}", id);
+        } else {
+            LOGGER.error("No se ha encontrado el turno con id {}", id);
+            throw new ResourceNotFoundException("No se ha encontrado el turno con id " + id);
+        }
 
     }
 
