@@ -4,6 +4,7 @@ package com.backend.clinicaodontologica.service.impl;
 import com.backend.clinicaodontologica.dto.entrada.paciente.PacienteEntradaDto;
 import com.backend.clinicaodontologica.dto.modificacion.PacienteModificacionEntradaDto;
 import com.backend.clinicaodontologica.dto.salida.paciente.PacienteSalidaDto;
+import com.backend.clinicaodontologica.entity.Domicilio;
 import com.backend.clinicaodontologica.entity.Paciente;
 import com.backend.clinicaodontologica.exceptions.ResourceNotFoundException;
 import com.backend.clinicaodontologica.repository.PacienteRepository;
@@ -26,7 +27,7 @@ public class PacienteService implements IPacienteService {
 
     private ModelMapper modelMapper;
 
-    @Autowired //no es necesario ponerlo
+    @Autowired
     public PacienteService(PacienteRepository pacienteRepository, ModelMapper modelMapper) {
         this.pacienteRepository = pacienteRepository;
         this.modelMapper = modelMapper;
@@ -34,13 +35,11 @@ public class PacienteService implements IPacienteService {
     }
 
     public PacienteSalidaDto registrarPaciente(PacienteEntradaDto paciente) {
-        //convertimos mediante el mapper de dtoEntrada a entidad
         LOGGER.info("PacienteEntradaDto: " + JsonPrinter.toString(paciente));
         Paciente pacienteEntidad = modelMapper.map(paciente, Paciente.class);
 
-        //mandamos a persistir a la capa dao y obtenemos una entidad
         Paciente pacienteAPersistir = pacienteRepository.save(pacienteEntidad);
-        //transformamos la entidad obtenida en salidaDto
+
         PacienteSalidaDto pacienteSalidaDto = modelMapper.map(pacienteAPersistir, PacienteSalidaDto.class);
         LOGGER.info("PacienteSalidaDto: " + JsonPrinter.toString(pacienteSalidaDto));
         return pacienteSalidaDto;
@@ -76,6 +75,8 @@ public class PacienteService implements IPacienteService {
     @Override
     public PacienteSalidaDto actualizarPaciente(PacienteModificacionEntradaDto paciente) throws ResourceNotFoundException{
         Paciente pacienteRecibido = modelMapper.map(paciente, Paciente.class);
+        Long id_paciente = paciente.getId();
+
         Paciente pacienteAActualizar = pacienteRepository.findById(pacienteRecibido.getId()).orElse(null);
 
         PacienteSalidaDto pacienteSalidaDto = null;

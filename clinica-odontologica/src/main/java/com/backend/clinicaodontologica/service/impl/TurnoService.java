@@ -16,7 +16,6 @@ import org.modelmapper.ModelMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.BadSqlGrammarException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -48,7 +47,6 @@ public class TurnoService implements ITurnoService {
                 "Odontologo no encontrado " + turnoEntradaDto.getIdOdontologo()));
 
 
-        // Verificar si la fecha y hora ya están ocupadas, implementar lógica según necesidad
             List<Turno> turnoAComparar = turnoRepository.findByFechaYHora(turnoEntradaDto.getFechaYHora());
         if(turnoAComparar.isEmpty()) {
             Turno nuevoTurno = new Turno();
@@ -68,12 +66,10 @@ public class TurnoService implements ITurnoService {
     @Override
     public List<TurnoSalidaDto> listarTurnos() {
         List<Turno> turnos = turnoRepository.findAll();
-        // Mapear la lista de entidades Turno a una lista de DTO TurnoSalidaDto
         return turnos.stream()
                 .map(turno -> modelMapper.map(turno, TurnoSalidaDto.class))
                 .toList();
 
     }
 
-    // Puedes agregar más métodos según las necesidades específicas de tu aplicación
 }

@@ -5,18 +5,21 @@ import com.backend.clinicaodontologica.dto.entrada.paciente.PacienteEntradaDto;
 import com.backend.clinicaodontologica.dto.salida.paciente.PacienteSalidaDto;
 import com.backend.clinicaodontologica.exceptions.ResourceNotFoundException;
 import org.h2.jdbc.JdbcBatchUpdateException;
+import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestMethodOrder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.time.LocalDate;
+import java.util.List;
 
 import static org.junit.Assert.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 class PacienteServiceTest{
 
     @Autowired
@@ -41,6 +44,16 @@ class PacienteServiceTest{
         }
 
         assertThrows(ResourceNotFoundException.class, () -> pacienteService.eliminarPaciente(1L));
+
+    }
+
+    @Test
+    @Order(3)
+    void deberiaDevolverUnaListaVaciaDePacientes() {
+
+        List<PacienteSalidaDto> pacientesDto = pacienteService.listarPacientes();
+
+        assertTrue(pacientesDto.isEmpty());
 
     }
 }

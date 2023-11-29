@@ -25,7 +25,7 @@ public class OdontologoService implements IOdontologoService {
 
     private ModelMapper modelMapper;
 
-    @Autowired //no es necesario ponerlo
+    @Autowired
     public  OdontologoService(OdontologoRepository odontologoRepository, ModelMapper modelMapper) {
         this.odontologoRepository = odontologoRepository;
         this.modelMapper = modelMapper;
