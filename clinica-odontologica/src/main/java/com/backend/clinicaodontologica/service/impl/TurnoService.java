@@ -1,6 +1,9 @@
 package com.backend.clinicaodontologica.service.impl;
 
 import com.backend.clinicaodontologica.dto.entrada.turno.TurnoEntradaDto;
+import com.backend.clinicaodontologica.dto.modificacion.TurnoModificacionEntradaDto;
+import com.backend.clinicaodontologica.dto.salida.odontologo.OdontologoSalidaDto;
+import com.backend.clinicaodontologica.dto.salida.paciente.PacienteSalidaDto;
 import com.backend.clinicaodontologica.dto.salida.turno.TurnoSalidaDto;
 import com.backend.clinicaodontologica.entity.Odontologo;
 import com.backend.clinicaodontologica.entity.Paciente;
@@ -40,7 +43,7 @@ public class TurnoService implements ITurnoService {
     }
 
     @Override
-    public void asignarTurno(TurnoEntradaDto turnoEntradaDto) throws BadRequestException {
+    public TurnoSalidaDto asignarTurno(TurnoEntradaDto turnoEntradaDto) throws BadRequestException {
         Paciente paciente = pacienteRepository.findById(turnoEntradaDto.getIdPaciente()).orElseThrow(() -> new BadRequestException(
                 "Paciente no encontrado " + turnoEntradaDto.getIdPaciente()));
         Odontologo odontologo = odontologoRepository.findById(turnoEntradaDto.getIdOdontologo()).orElseThrow(() -> new BadRequestException(
@@ -56,6 +59,10 @@ public class TurnoService implements ITurnoService {
             LOGGER.info("Turno Agendado: {}", JsonPrinter.toString(nuevoTurno));
 
             turnoRepository.save(nuevoTurno);
+
+            TurnoSalidaDto turnoSalidaDto = modelMapper.map(nuevoTurno, TurnoSalidaDto.class);
+            LOGGER.info("TurnoSalidaDto: " + JsonPrinter.toString(turnoSalidaDto));
+            return turnoSalidaDto;
         }
         else {
             LOGGER.error("La fecha y hora ya estan ocupadas");
@@ -86,4 +93,19 @@ public class TurnoService implements ITurnoService {
 
     }
 
+    @Override
+    public TurnoSalidaDto actulizarTurno(TurnoModificacionEntradaDto turnoModificacionEntradaDto) throws ResourceNotFoundException {
+        Turno turnoAActualizar = turnoRepository.findById(turnoModificacionEntradaDto.getId()).orElseThrow(() -> new ResourceNotFoundException(
+                "Turno no encontrado " + turnoModificacionEntradaDto.getId()));
+
+        turnoAActualizar.setFechaYHora(turnoModificacionEntradaDto.getNuevaFechaHora());
+
+        turnoRepository.save(turnoAActualizar);
+
+        TurnoSalidaDto turnoSalidaDto = modelMapper.map(turnoAActualizar, TurnoSalidaDto.class);
+        LOGGER.warn("Paciente actualizado: {}", JsonPrinter.toString(turnoSalidaDto));
+
+
+        return turnoSalidaDto;
+    }
 }

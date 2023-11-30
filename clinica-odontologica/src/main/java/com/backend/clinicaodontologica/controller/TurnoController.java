@@ -1,8 +1,12 @@
 package com.backend.clinicaodontologica.controller;
 
 import com.backend.clinicaodontologica.dto.entrada.turno.TurnoEntradaDto;
+import com.backend.clinicaodontologica.dto.modificacion.OdontologoModificacionEntradaDto;
+import com.backend.clinicaodontologica.dto.modificacion.TurnoModificacionEntradaDto;
+import com.backend.clinicaodontologica.dto.salida.odontologo.OdontologoSalidaDto;
 import com.backend.clinicaodontologica.dto.salida.turno.TurnoSalidaDto;
 import com.backend.clinicaodontologica.exceptions.BadRequestException;
+import com.backend.clinicaodontologica.exceptions.ResourceNotFoundException;
 import com.backend.clinicaodontologica.service.ITurnoService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -22,9 +26,8 @@ public class TurnoController{
     }
 
     @PostMapping("/asignar")
-    public ResponseEntity<String> asignarTurno(@RequestBody TurnoEntradaDto turnoEntradaDto) throws BadRequestException {
-        turnoService.asignarTurno(turnoEntradaDto);
-        return ResponseEntity.status(HttpStatus.CREATED).body("Turno asignado con éxito");
+    public ResponseEntity<TurnoSalidaDto> asignarTurno(@RequestBody TurnoEntradaDto turnoEntradaDto) throws BadRequestException {
+        return new ResponseEntity<>(turnoService.asignarTurno(turnoEntradaDto), HttpStatus.CREATED);
     }
 
     @GetMapping("/listar")
@@ -33,5 +36,16 @@ public class TurnoController{
         return ResponseEntity.ok(turnos);
     }
 
-    // otros métodos del controlador relacionados con turnos, si los hay
+    @DeleteMapping("eliminar/{id}")
+    public ResponseEntity<?> eliminarTurnos(@PathVariable Long id) throws ResourceNotFoundException {
+        turnoService.eliminarTurno(id);
+        return new ResponseEntity<>("Turno eliminado correctamente", HttpStatus.OK);
+    }
+
+    @PutMapping("/actualizar")
+    public TurnoSalidaDto actualizarTurno(@RequestBody TurnoModificacionEntradaDto turno)  throws ResourceNotFoundException {
+        return turnoService.actulizarTurno(turno);
+    }
+
+
 }

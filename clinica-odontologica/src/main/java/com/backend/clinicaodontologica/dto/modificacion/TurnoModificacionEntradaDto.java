@@ -10,6 +10,7 @@ public class TurnoModificacionEntradaDto {
     @NotNull(message = "Debe proveerse el id del turno que se desea modificar")
     private Long id;
 
+
     @FutureOrPresent(message = "La fecha no puede ser anterior al día de hoy")
     @NotNull(message = "Debe especificarse la fecha y hora de la nueva reserva")
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss")

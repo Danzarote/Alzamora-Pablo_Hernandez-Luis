@@ -5,7 +5,11 @@ import java.time.LocalDateTime;
 public class TurnoSalidaDto {
     private Long id;
     private Long idPaciente;
+    private String nombrePaciente;
+    private String apellidoPaciente;
     private Long idOdontologo;
+    private String nombreOdontologo;
+    private String apellidoOdontologo;
     private LocalDateTime fechaYHora;
 
     // constructores, getters y setters
@@ -14,10 +18,14 @@ public class TurnoSalidaDto {
     public TurnoSalidaDto() {
     }
 
-    public TurnoSalidaDto(Long id, Long idPaciente, Long idOdontologo, LocalDateTime fechaYHora) {
+    public TurnoSalidaDto(Long id, Long idPaciente, String nombrePaciente, String apellidoPaciente, Long idOdontologo, String nombreOdontologo, String apellidoOdontologo, LocalDateTime fechaYHora) {
         this.id = id;
         this.idPaciente = idPaciente;
+        this.nombrePaciente = nombrePaciente;
+        this.apellidoPaciente = apellidoPaciente;
         this.idOdontologo = idOdontologo;
+        this.nombreOdontologo = nombreOdontologo;
+        this.apellidoOdontologo = apellidoOdontologo;
         this.fechaYHora = fechaYHora;
     }
 
@@ -53,12 +61,49 @@ public class TurnoSalidaDto {
         this.fechaYHora = fechaYHora;
     }
 
+    public String getApellidoPaciente() {
+        return apellidoPaciente;
+    }
+
+    public void setApellidoPaciente(String apellidoPaciente) {
+        this.apellidoPaciente = apellidoPaciente;
+    }
+
+    public String getApellidoOdontologo() {
+        return apellidoOdontologo;
+    }
+
+    public void setApellidoOdontologo(String apellidoOdontologo) {
+        this.apellidoOdontologo = apellidoOdontologo;
+    }
+
+    public String getNombrePaciente() {
+        return nombrePaciente;
+    }
+
+    public void setNombrePaciente(String nombrePaciente) {
+        this.nombrePaciente = nombrePaciente;
+    }
+
+    public String getNombreOdontologo() {
+        return nombreOdontologo;
+    }
+
+    public void setNombreOdontologo(String nombreOdontologo) {
+        this.nombreOdontologo = nombreOdontologo;
+    }
+
+
     @Override
     public String toString() {
         return "TurnoSalidaDto{" +
                 "id=" + id +
                 ", idPaciente=" + idPaciente +
+                ", nombrePaciente='" + nombrePaciente + '\'' +
+                ", apellidoPaciente='" + apellidoPaciente + '\'' +
                 ", idOdontologo=" + idOdontologo +
+                ", nombreOdontologo='" + nombreOdontologo + '\'' +
+                ", apellidoOdontologo='" + apellidoOdontologo + '\'' +
                 ", fechaYHora=" + fechaYHora +
                 '}';
     }
