@@ -26,14 +26,13 @@ window.addEventListener("load", function () {
       console.log("Enviando solicitud...");
       
       fetch(urlAgregar, settings)
-    .then((response) => {
-        console.log("Respuesta del servidor (raw):", response);
-        return response.json();
-    })
-    .then((odontologo) => {
-        console.log("Respuesta del servidor (parsed):", odontologo);
-        window.location.href = "./listar_odontologos.html";
-    })
+        .then((response) => response.json())
+        .then((odontologo) => {
+          console.log("Respuesta del servidor:", odontologo);
+       ;
+          window.location.href="./listar_odontologos.html"
+  
+        })
     .catch((err) => {
         console.warn("Promesa rechazada");
         console.log(err);

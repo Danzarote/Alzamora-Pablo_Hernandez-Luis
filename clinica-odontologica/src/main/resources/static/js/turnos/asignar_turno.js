@@ -9,7 +9,7 @@ window.addEventListener("load", function () {
       event.preventDefault();
   
       const payload = {
-       idPaciente: idPaciente.value,
+        idPaciente: idPaciente.value,
         idOdontologo: idOdontologo.value,
         fechaYHora: fechaYHora.value,
         }
