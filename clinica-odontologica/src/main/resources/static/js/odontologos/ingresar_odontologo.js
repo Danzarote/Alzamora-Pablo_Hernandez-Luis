@@ -32,7 +32,7 @@ window.addEventListener("load", function () {
     })
     .then((odontologo) => {
         console.log("Respuesta del servidor (parsed):", odontologo);
-        window.location.href = "../listar_odontologos.html";
+        window.location.href = "./listar_odontologos.html";
     })
     .catch((err) => {
         console.warn("Promesa rechazada");

@@ -44,7 +44,7 @@ window.addEventListener("load", function () {
     })
     .then((paciente) => {
         console.log("Respuesta del servidor (parsed):", paciente);
-        window.location.href = "../listar_pacientes.html";
+        window.location.href = "./listar_pacientes.html";
     })
     .catch((err) => {
         console.warn("Promesa rechazada");

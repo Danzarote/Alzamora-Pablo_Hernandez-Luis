@@ -30,7 +30,7 @@ window.addEventListener("load", function () {
         .then((turno) => {
           console.log("Respuesta del servidor:", turno);
        ;
-          window.location.href="../listar_turnos.html"
+          window.location.href="./listar_turnos.html"
   
         })
   
