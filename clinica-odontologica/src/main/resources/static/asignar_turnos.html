@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clínica Odontológica</title>
+  <meta
+          name="description"
+          content="Proyecto integrador | backend"
+  />
+
+  <link rel="stylesheet" href="./css/asignar_turno.css" />
+
+
+  <script src="./js/turnos/asignar_turno.js"></script>
+
+</head>
+<body>
+<header class="container">
+  <nav>
+    <img src="./image/Diente.png" alt="logo clínica" />
+    <h1>Clínica Odontológica</h1>
+      <ul  class="li-header">
+        <li>
+          <a id="indexPaciente" class="rounded ingresarA" href="./index_pacientes.html">Pacientes</a>
+        </li>
+        <li>
+          <a id="indexOdontologos" class="rounded ingresarA" href="./index_odontologos.html">Odontólogos</a>
+        </li>
+      </ul>
+    <h2><a id="home" href="./index.html">Home</a></h2>
+  </nav>
+</header>
+
+<div class="container">
+  <form action="/asignarTurno" method="post" id="AsignarTurno">
+    <div class="form-header">
+      <h2>Asignar Turno</h2>
+    </div>
+
+    <div>
+      <label for="idOdontologo" name="IdOdontologo">ID Odontólogo:</label>
+      <input
+              type="number"
+              id="idOdontologo"
+              placeholder="Ingrese el ID del odontólogo"
+              name="idodontologo"
+              required
+      />
+    </div>
+    <div>
+      <label for="idPaciente" name="IdPaciente">ID Paciente:</label>
+      <input
+              type="number"
+              id="idPaciente"
+              placeholder="Ingrese el ID del paciente"
+              name="idpaciente"
+              required
+      />
+    </div>
+    <div>
+      <label for="fechaYHora" name="FechaYHora">Fecha y Hora: </label>
+      <input
+              type="datetime"
+              id="fechaYHora"
+              placeholder="YYYY-MM-DD HH:00:00 "
+              name="fechayhora"
+              required
+      />
+    </div>
+    <div>
+      <button
+              type="submit"
+              class="fa-solid fa-right-from-bracket"
+              id="botonIngresarNuevoTurno"
+      >Guardar Turno
+      </button>
+
+    </div>
+
+
+
+  </form>
+
+</div>
+</body>
+</html>

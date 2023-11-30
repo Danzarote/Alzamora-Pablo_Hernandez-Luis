@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clínica Odontológica</title>
+  <meta
+          name="description"
+          content="Proyecto integrador | backend"
+  />
+
+  <link rel="stylesheet" href="./css/listar_turnos.css" />
+
+  <script src="./js/turnos/listar_turnos.js"></script>
+
+</head>
+<body>
+  <header class="container">
+    <nav>
+      <img src="./image/Diente.png" alt="logo clínica" />
+      <h1>Clínica Odontológica</h1>
+        <ul  class="li-header">
+          <li>
+            <a id="indexPaciente" class="rounded ingresarA" href="./ingresar_paciente.html">Pacientes</a>
+          </li>
+          <li>
+            <a id="indexTurnos" class="rounded ingresarA" href="./ingresar_odontologo.html">Odontólogos</a>
+          </li>
+        </ul>
+      <h2><a id="home" href="./index.html">Home</a></h2>
+    </nav>
+  </header>
+
+<div class="container">
+
+  <form id="listar" action="listarTurnos" method="GET">
+    <div class="form-header">
+      <h2>Turnos registrados</h2>
+
+      <button
+              type="submit"
+              class="fa-solid fa-right-from-bracket"
+              id="listarTurno">Ver Turnos
+      </button>
+
+    </div>
+
+    <div class="turnos">
+
+    </div>
+
+
+</form>
+</div>
+</body>
+</html>

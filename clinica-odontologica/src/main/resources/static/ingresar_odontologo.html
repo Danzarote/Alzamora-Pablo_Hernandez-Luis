@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clínica Odontológica</title>
+  <meta
+          name="description"
+          content="Proyecto integrador | backend"
+  />
+
+  <link rel="stylesheet" href="./css/ingresar_odontologo.css" />
+
+
+  <script src="./js/odontologos/ingresar_odontologo.js"></script>
+
+</head>
+<body>
+<header class="container">
+  <nav>
+    <img src="./image/Diente.png" alt="logo clínica" />
+    <h1>Clínica Odontológica</h1>
+      <ul  class="li-header">
+        <li>
+          <a id="indexPaciente" class="rounded ingresarA" href="./index_pacientes.html">Pacientes</a>
+        </li>
+        <li>
+          <a id="indexTurnos" class="rounded ingresarA" href="./index_turnos.html">Turnos</a>
+        </li>
+      </ul>
+    <h2><a id="home" href="./index.html">Home</a></h2>
+  </nav>
+</header>
+
+<div class="container">
+  <form action="/ingresarOdontologo" method="post" id="IngresarOdontologo">
+    <div class="form-header">
+      <h2>Ingresar Odontólogo</h2>
+    </div>
+
+    <div>
+      <label for="nombre" name="Nombre">Nombre:</label>
+      <input
+              type="text"
+              id="nombre"
+              placeholder="Ingrese el nombre del odontólogo"
+              name="nombre"
+              required
+      />
+    </div>
+    <div>
+      <label for="apellido" name="Apellido">Apellido:</label>
+      <input
+              type="text"
+              id="apellido"
+              placeholder="Ingrese el apellido del odontólogo"
+              name="apellido"
+              required
+      />
+    </div>
+    <div>
+      <label for="matricula" name="matricula">Matrícula: </label>
+      <input
+              type="text"
+              id="matricula"
+              placeholder="Ingrese la matrícula del Odontólogo"
+              name="matricula"
+              required
+      />
+    </div>
+    <div>
+      <button
+              type="submit"
+              class="fa-solid fa-right-from-bracket"
+              id="botonIngresarNuevoOdontologo"
+      >Guardar Odontólogo
+      </button>
+
+    </div>
+
+
+
+  </form>
+
+</div>
+</body>
+</html>
