@@ -108,4 +108,21 @@ public class TurnoService implements ITurnoService {
 
         return turnoSalidaDto;
     }
+
+    @Override
+    public TurnoSalidaDto buscarTurnoPorId(Long id) throws ResourceNotFoundException {
+
+        Turno turnoBuscado = turnoRepository.findById(id).orElse(null);
+        TurnoSalidaDto turnoEncontrado = null;
+
+        if (turnoBuscado != null) {
+            turnoEncontrado = modelMapper.map(turnoBuscado, TurnoSalidaDto.class);
+            LOGGER.info("Turno encontrado: {}", JsonPrinter.toString(turnoEncontrado));
+        } else {
+            LOGGER.error("El id no se encuentra registrado en la base de datos");
+            throw new ResourceNotFoundException("No se ha encontrado el turno con id " + id);
+        }
+
+        return turnoEncontrado;
+    }
 }
